@@ -99,7 +99,7 @@ vectortwo <- collect(select(steps, total_steps))[[1]]
 Now create histogram of steps per day
 
 ```{r}
-hist(vectortwo, xlab = "Total Steps", main = "Histogram of Total Steps Taken per Day")
+hist(vectortwo, xlab = "Total Steps", main = "Histogram of Total Steps Taken per Day w/ Imputed Data")
 ```
 
 

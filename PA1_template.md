@@ -185,7 +185,7 @@ Now create histogram of steps per day
 
 
 ```r
-hist(vectortwo, xlab = "Total Steps", main = "Histogram of Total Steps Taken per Day")
+hist(vectortwo, xlab = "Total Steps", main = "Histogram of Total Steps Taken per Day w/ Imputed Data")
 ```
 
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
