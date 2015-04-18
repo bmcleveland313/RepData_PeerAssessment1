@@ -258,14 +258,8 @@ To evaluate the difference in activity patterns between weekdays and weekends, y
 
 ```r
 library(lubridate)
-imputed$date <- mdy(imputed$date)
-```
+imputed$date <- ymd(as.character(imputed$date))
 
-```
-## Warning: All formats failed to parse. No formats found.
-```
-
-```r
 imputed$weekday <- weekdays(imputed$date)
 
 imputed$daytype <- as.character(0)
@@ -278,13 +272,13 @@ head(imputed)
 ```
 
 ```
-##       steps date interval weekday daytype
-## 1 1.7169811 <NA>        0    <NA>       0
-## 2 0.3396226 <NA>        5    <NA>       0
-## 3 0.1320755 <NA>       10    <NA>       0
-## 4 0.1509434 <NA>       15    <NA>       0
-## 5 0.0754717 <NA>       20    <NA>       0
-## 6 2.0943396 <NA>       25    <NA>       0
+##       steps       date interval weekday daytype
+## 1 1.7169811 2012-10-01        0  Monday weekday
+## 2 0.3396226 2012-10-01        5  Monday weekday
+## 3 0.1320755 2012-10-01       10  Monday weekday
+## 4 0.1509434 2012-10-01       15  Monday weekday
+## 5 0.0754717 2012-10-01       20  Monday weekday
+## 6 2.0943396 2012-10-01       25  Monday weekday
 ```
 
 Now you can create a panel plot to view the time series data side-by-side to note differences

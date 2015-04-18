@@ -134,7 +134,7 @@ To evaluate the difference in activity patterns between weekdays and weekends, y
 ```{r}
 
 library(lubridate)
-imputed$date <- mdy(imputed$date)
+imputed$date <- ymd(as.character(imputed$date))
 
 imputed$weekday <- weekdays(imputed$date)
 
